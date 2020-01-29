@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ginger</groupId>
+    <artifactId>ginger-parent-common</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <properties>
+  	<java.version>11</java.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+    <dependency>
+      <groupId>com.ginger</groupId>
+      <artifactId>ginger-common</artifactId>
+      <version>${com.ginger.version}</version>
+    </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <groupId>com.ginger.demo.reactive</groupId>
+  <artifactId>ginger-reactive-programming</artifactId>
+  <packaging>pom</packaging>
+  <description>响应式编程</description>
+   <modules>
+    <module>ginger-demo-webflux</module>
+    <module>ginger-lambda</module>
+    <module>ginger-steam</module>
+    <module>ginger-jdk9</module>
+    <module>ginger-servlet3</module>
+    <module>ginger-demo-webflux-function</module>
+    <module>ginger-demo-webflux-client</module>
+   </modules>
+</project>

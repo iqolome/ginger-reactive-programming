@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>主页</title>
+</head>
+<body>
+<script type="text/javascript">
+//初始化 参数为URL
+//依赖H5
+var sse = new EventSource("SSE");
+sse.onmessage = function(e){
+	console.log("message",e.data,e);
+};
+sse.addEventListener("me",function(e){
+	console.log("me event",e.data);
+	if(e.data == 10){
+		sse.close();
+	}
+});
+</script>
+</body>
+</html>
